@@ -1,16 +1,12 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel
-from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QApplication
+from viewer import ImageViewer
 import sys
 
-app = QApplication(sys.argv)
+def main():
+    app = QApplication(sys.argv)
+    window = ImageViewer()
+    window.show()
+    sys.exit(app.exec_())
 
-window = QWidget()
-window.setWindowTitle("PeekPy")
-window.setGeometry(200, 200, 300, 200)
-
-label = QLabel("Image Viewer", window)
-label.setAlignment(Qt.AlignCenter)
-
-window.show()
-
-app.exec()
+if __name__ == "__main__":
+    main()
