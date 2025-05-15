@@ -33,7 +33,6 @@ def main():
             window.imageLabel.setPixmap(scaled_pixmap)
 
     
-
     window.pushButton.clicked.connect(upload_image)
     window.setWindowTitle("Peekpy")
     window.setWindowIcon(QIcon("assets/icon.ico"))
